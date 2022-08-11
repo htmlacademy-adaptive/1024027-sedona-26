@@ -1,0 +1,28 @@
+.page-header {
+  position: relative;
+}
+
+.page-header__logo {
+  position: absolute;
+  width: 185px;
+  top: 0;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+}
+
+.page-header__welcome {
+  margin: 0;
+  height: 389px;
+  background: url("../img/welcome.svg") no-repeat 50% 90px, $header-background-color url("../img/header-mobile@1x.jpg") no-repeat 50% 100%;
+}
+
+.page-header__site-name {
+  height: 158px;
+  color: $primary-text-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  background: url("../img/sedona.svg") no-repeat 50% 52px, $header-background-color url("../img/header-mobile@1x.jpg") no-repeat 50% 100%;
+}

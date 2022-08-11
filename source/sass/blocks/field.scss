@@ -1,0 +1,33 @@
+.field {
+  font: $title-font;
+  color: $title-color;
+  background-color: $field-background-color;
+  padding: 16px;
+  box-sizing: border-box;
+  width: 100%;
+  border: none;
+
+  &::placeholder {
+    color: transparentize($title-color, 0.7);
+  }
+
+  &:hover {
+    background-color: $field-hover-background-color;
+  }
+
+  &:focus,
+  &:active {
+    outline: none;
+    background-color: $field-active-background-color;
+    box-shadow: 0 0 0 4px inset $border-color;
+  }
+
+  // &--text { :todo удалить?
+
+  // }
+
+  &--area {
+    height: 150px;
+    resize: none;
+  }
+}

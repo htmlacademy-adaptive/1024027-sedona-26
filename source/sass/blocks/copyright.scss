@@ -1,0 +1,19 @@
+.copyright {
+  font: $text-font;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.copyright__link {
+  text-decoration: none;
+  color: $title-color;
+
+  &:hover {
+    color: $primary-background-color;
+  }
+}
+
+.copyright__icon {
+  margin-left: 13px;
+  vertical-align: middle;
+}
