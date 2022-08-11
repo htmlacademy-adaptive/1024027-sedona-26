@@ -1,0 +1,28 @@
+.button {
+  display: inline-block;
+  background-color: $primary-background-color;
+  color: $primary-text-color;
+  font: $button-font;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 16px;
+  text-decoration: none;
+  box-sizing: border-box;
+  border: none;
+
+  &--icon {
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    position: relative;
+  }
+}
+
+.button__icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
