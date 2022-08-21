@@ -35,6 +35,7 @@
     @media (min-width: $tablet-width) {
       grid-column-start: span 2;
     }
+
     @media (min-width: $desktop-width) {
       grid-column-start: span 3;
     }
@@ -62,8 +63,7 @@
     position: relative;
     display: grid;
     grid-auto-flow: column;
-    grid-template-areas: "name   like"
-                         "author like";
+    grid-template-areas: "name   like" "author like";
   }
 
   @media (min-width: $desktop-width) {

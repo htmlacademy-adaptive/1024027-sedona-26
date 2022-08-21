@@ -75,7 +75,6 @@
       }
     }
   }
-
 }
 
 .form__legend {
@@ -91,7 +90,6 @@
 
   &::before,
   &::after {
-
     @media (min-width: $tablet-width) {
       content: "";
       border-top: 1px solid $border-color;
@@ -102,7 +100,6 @@
       flex-basis: 30%;
     }
   }
-
 }
 
 .form__group {
