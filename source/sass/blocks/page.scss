@@ -1,6 +1,14 @@
+.page {
+  height: 100%;
+  background-color: var($page-background-color);
+}
+
 .page__body {
-  font: $text-font;
+  min-height: 100%;
+  font: $base-font;
   margin: 0 auto;
-  width: 320px; //todo: удалить
   color: $text-color;
+  background-color: $white;
+  max-width: $desktop-width;
+  box-shadow: 0 5px 15px rgba(0, 1, 1, 0.2);
 }

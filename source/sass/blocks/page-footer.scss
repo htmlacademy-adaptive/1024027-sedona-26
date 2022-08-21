@@ -1,8 +1,24 @@
 .page-footer {
   padding: 39px 18px 23px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.page-footer__social {
+  @media (min-width: $tablet-width) {
+    flex-basis: 200%;
+  }
 }
 
 .page-footer__copyright {
   margin-top: 40px;
+
+  @media (min-width: $tablet-width) {
+    flex-basis: 100%;
+    margin-top: 0;
+  }
 }

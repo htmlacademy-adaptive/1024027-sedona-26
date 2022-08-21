@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — фото и видео</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,15 +14,15 @@
         <img class="page-header__logo-img" src="img/logo.svg" alt="CITY OF SEDONA" width="185" height="96" />
       </a>
 
-      <nav class="page-nav">
-        <button class="page-nav__toggle" type="button">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="page-nav__list">
-          <li class="page-nav__item"><a class="page-nav__link" href="index.html">Главная</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Фото и видео</a></li>
-          <li class="page-nav__item page-nav__item--current"><a class="page-nav__link" href="form.html">Форма Отзыва</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
+        <ul class="main-nav__list">
+          <li class="main-nav__item"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item main-nav__item--current"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма Отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/" target="_blank">HTML ACADEMY</a></li>
         </ul>
       </nav>
 
@@ -32,75 +33,77 @@
 
     <div class="page-content">
 
-      <h1 class="page-content__title title">Фото и видео</h1>
-      <p class="page-content__intro intro">Не можете решиться на путешествие <span class="nowrap">из-за курса?</span> Фотографии помогут вам забыть о&nbsp;политике и экономике.</p>
+      <div class="media">
+        <h1 class="media__title title">Фото и видео</h1>
+        <p class="media__intro intro">Не можете решиться на путешествие <span class="nowrap">из-за курса?</span> Фотографии помогут вам забыть о&nbsp;политике и экономике.</p>
 
-      <section class="gallery">
-        <h2 class="visually-hidden">Фотогалерея</h2>
-        <ul class="gallery__list">
-          <li class="gallery__item">
-            <figure class="gallery__img">
-              <a href="#"><img src="img/gallery/photo-1-mobile@1x.jpg" alt="Дорога в Седону" /></a>
-              <figcaption class="gallery__img-name">Неродные просторы</figcaption>
-            </figure>
-            <cite class="gallery__img-author">Автор фото: Борис</cite>
-            <div class="gallery__like like">
-              <button class="like__button"><span class="visually-hidden">Нравится</span></button>
-              <span class="like__count">1350</span>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <figure class="gallery__img">
-              <a href="#"><img src="img/gallery/photo-2-mobile@1x.jpg" alt="Растение забудка обыкновенная" /></a>
-              <figcaption class="gallery__img-name">Местная растительность</figcaption>
-            </figure>
-            <cite class="gallery__img-author">Автор фото: Сергей</cite>
-            <div class="gallery__like like">
-              <button class="like__button"><span class="visually-hidden">Нравится</span></button>
-              <span class="gallery__like-count">143</span>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <figure class="gallery__img">
-              <a href="#"><img src="img/gallery/photo-3-mobile@1x.jpg" alt="Вид на дорогу в Седону с высоты птичьего полета" /></a>
-              <figcaption class="gallery__img-name">Дорога на север</figcaption>
-            </figure>
-            <cite class="gallery__img-author">Автор фото: Петр</cite>
-            <div class="gallery__like like">
-              <button class="like__button"><span class="visually-hidden">Нравится</span></button>
-              <span class="gallery__like-count">96</span>
-            </div>
-          </li>
-          <li class="gallery__item">
-            <figure class="gallery__img">
-              <a href="#"><img src="img/gallery/photo-4-mobile@1x.jpg" alt="Мост дьявола" /></a>
-              <figcaption class="gallery__img-name">Мост дьявола</figcaption>
-            </figure>
-            <cite class="gallery__img-author">Автор фото: Антон</cite>
-            <div class="gallery__like like">
-              <button class="like__button"><span class="visually-hidden">Нравится</span></button>
-              <span class="gallery__like-count">254</span>
-            </div>
-          </li>
-        </ul>
-      </section>
+        <section class="gallery">
+          <h2 class="visually-hidden">Фотогалерея</h2>
+          <ul class="gallery__list">
+            <li class="gallery__item">
+              <a class="gallery__img" href="#"><img src="img/gallery/photo-1-mobile@1x.jpg" alt="Дорога в Седону" /></a>
+              <div class="gallery__img-description">
+                <div class="gallery__img-name">Неродные просторы</div>
+                <cite class="gallery__img-author">Автор фото: Борис</cite>
+                <div class="gallery__like like">
+                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <span class="like__count">1350</span>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__img" href="#"><img src="img/gallery/photo-2-mobile@1x.jpg" alt="Растение забудка обыкновенная" /></a>
+              <div class="gallery__img-description">
+                <div class="gallery__img-name">Местная растительность</div>
+                <cite class="gallery__img-author">Автор фото: Сергей</cite>
+                <div class="gallery__like like">
+                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <span class="gallery__like-count">143</span>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__img" href="#"><img src="img/gallery/photo-3-mobile@1x.jpg" alt="Вид на дорогу в Седону с высоты птичьего полета" /></a>
+              <div class="gallery__img-description">
+                <div class="gallery__img-name">Дорога на север</div>
+                <cite class="gallery__img-author">Автор фото: Петр</cite>
+                <div class="gallery__like like">
+                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <span class="gallery__like-count">96</span>
+                </div>
+              </div>
+            </li>
+            <li class="gallery__item">
+              <a class="gallery__img" href="#"><img src="img/gallery/photo-4-mobile@1x.jpg" alt="Мост дьявола" /></a>
+              <div class="gallery__img-description">
+                <div class="gallery__img-name">Мост дьявола</div>
+                <cite class="gallery__img-author">Автор фото: Антон</cite>
+                <div class="gallery__like like">
+                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <span class="gallery__like-count">254</span>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </section>
 
 
-      <section class="video">
-        <h2 class="visually-hidden">Видеопрезентация</h2>
-        <b class="video__title title">Все еще сомневаетесь?</b>
-        <p class="video__intro intro">Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не подорожали в&nbsp;очередной раз!</p>
-        <video src="videofile.ogg" poster="img/video-poster@1x.jpg">
-          Извините, тег video не поддерживается вашим браузером.
-          Вы можете <a href="videofile.ogg">скачать видеофайл</a>.
-          <span class="video__play"><span class="visually-hidden">Воспроизвести</span></span>
-        </video>
-      </section>
+        <section class="video">
+          <h2 class="visually-hidden">Видеопрезентация</h2>
+          <b class="video__title title">Все еще сомневаетесь?</b>
+          <p class="video__intro intro">Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
+          <div class="video__player">
+            <img src="img/video-poster@1x.jpg" alt="Стоп-кадр презентации Седоны" />
+            <button class="video__play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
+          </div>
+        </section>
+
+      </div>
     </div>
 
     <footer class="page-footer">
 
-      <section class="social">
+      <section class="page-footer__social social">
         <h2 class="social__title title">#visitSEDONA</h2>
 
         <ul class="social__list">
@@ -126,7 +129,7 @@
       </section>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/" target="_blank">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="currentColor"/>

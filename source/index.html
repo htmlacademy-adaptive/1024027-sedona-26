@@ -2,6 +2,7 @@
 <html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — главная</title>
     <link rel="stylesheet" href="css/style.css">
   </head>
@@ -13,20 +14,20 @@
         <img class="page-header__logo-img" src="img/logo.svg" alt="CITY OF SEDONA" width="185" height="96" />
       </a>
 
-      <nav class="page-nav">
-        <button class="page-nav__toggle" type="button">
+      <nav class="main-nav">
+        <button class="main-nav__toggle" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
-        <ul class="page-nav__list">
-          <li class="page-nav__item page-nav__item--current"><a class="page-nav__link" href="index.html">Главная</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="catalog.html">Фото и видео</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="form.html">Форма Отзыва</a></li>
-          <li class="page-nav__item"><a class="page-nav__link" href="https://htmlacademy.ru/">HTML ACADEMY</a></li>
+        <ul class="main-nav__list">
+          <li class="main-nav__item main-nav__item--current"><a class="main-nav__link" href="index.html">Главная</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Фото и видео</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="form.html">Форма Отзыва</a></li>
+          <li class="main-nav__item"><a class="main-nav__link" href="https://htmlacademy.ru/" target="_blank">HTML ACADEMY</a></li>
         </ul>
       </nav>
 
       <h1 class="page-header__welcome">
-        <span class="visually-hidden">Welcome to the gordeous SEDONA. 'Because the Grand Canyoun sucks!'</span>
+        <span class="visually-hidden">Welcome to the gordeous SEDONA. "Because the Grand Canyoun sucks!"</span>
       </h1>
     </header>
 
@@ -45,8 +46,7 @@
               <p class="benefits__text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
             <img class="benefits__img" src="img/photo-city@1x.jpg" alt="Местное здание" width="320" height="260" />
-
-            <ul class="recommendations">
+            <ul class="benefits__recommendations recommendations">
               <li class="recommendations__item recommendations__item--house">
                 <h4 class="recommendations__title title">Жилье</h4>
                 <p class="recommendations__text">Рекомендуем пожить в настоящем мотеле, все как в кино!</p>
@@ -60,11 +60,10 @@
                 <p class="recommendations__text">Не только китайского, но и местного производства!</p>
               </li>
             </ul>
-
           </li>
           <li class="benefits__item benefits__item--selected">
             <div class="benefits__item-content">
-              <h3 class="benefits__item-title">ТАМ ЕСТЬ Мост дьявола</h3>
+              <h3 class="benefits__item-title">Там есть Мост дьявола</h3>
               <p class="benefits__number">— №2 —</p>
               <p class="benefits__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
@@ -72,21 +71,21 @@
           </li>
           <li class="benefits__item">
             <div class="benefits__item-content">
-              <h3 class="benefits__item-title">НЕБОЛЬШАЯ ПЛОЩАДЬ</h3>
+              <h3 class="benefits__item-title">Небольшая площадь</h3>
               <p class="benefits__number">— №3 —</p>
               <p class="benefits__text">ВСЕ интересные места находятся очень близко</p>
             </div>
           </li>
           <li class="benefits__item">
             <div class="benefits__item-content">
-              <h3 class="benefits__item-title">КРАСИВАЯ ДОРОГА</h3>
+              <h3 class="benefits__item-title">Красивая дорога</h3>
               <p class="benefits__number">— №4 —</p>
               <p class="benefits__text">ЕХАТЬ В СЕДОНУ ИЗ ЛАС-ВЕГАСА совсем НЕ СКУЧНО!</p>
             </div>
           </li>
           <li class="benefits__item">
             <div class="benefits__item-content">
-              <h3 class="benefits__item-title">МАЛО ТУРИСТОВ</h3>
+              <h3 class="benefits__item-title">Мало туристов</h3>
               <p class="benefits__number">— №5 —</p>
               <p class="benefits__text">Большинство едет в гранд каньон и толпится там</p>
             </div>
@@ -115,7 +114,7 @@
 
     <footer class="page-footer">
 
-      <section class="social">
+      <section class="page-footer__social social">
         <h2 class="social__title title">#visitSEDONA</h2>
 
         <ul class="social__list">
@@ -141,7 +140,7 @@
       </section>
 
       <div class="page-footer__copyright copyright">
-        <a class="copyright__link" href="https://htmlacademy.ru/" target="_blank">
+        <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive" target="_blank">
           <span class="copyright__text">Разработано</span>
           <svg class="copyright__icon" width="27" height="35" viewBox="0 0 27 35" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M13.6 0H13.5L0 1.4V26.1L13.5 34.1L26.9 26.1V1.4L13.6 0ZM25 12.1L13.5 5.3V5.2H13.4L13.3 5.1V5.2L1.9 12.1V3.1L13.4 1.9L25 3.1V12.1ZM13.4 6.8L24.9 13.5L20.4 16.1L13.3 11.9V13.3L19.2 16.8L18.3 17.3L13.3 14.3V15.7L17.1 18L16.3 18.5L13.3 16.7V18.1L15.2 19.2L13.4 20.3L2 13.6L13.4 6.8ZM1.9 15.1L13.3 21.9V22.9L5.4 18.2V19.6L13.4 24.4V25.5L5.4 20.8V22.2L13.4 27L21.5 22.1V16.9L24.9 14.9V24.9L13.4 31.8L1.9 25V15.1Z" fill="currentColor"/>

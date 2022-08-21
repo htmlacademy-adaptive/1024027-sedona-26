@@ -1,15 +1,15 @@
 .copyright {
-  font: $text-font;
+  font: $base-font;
   text-transform: uppercase;
   text-align: center;
 }
 
 .copyright__link {
   text-decoration: none;
-  color: $title-color;
+  color: $black;
 
   &:hover {
-    color: $primary-background-color;
+    color: $primary-color;
   }
 }
 
