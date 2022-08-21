@@ -1,17 +1,29 @@
+// Viewports
+
+$tablet-width: 768px;
+$desktop-width: 1200px;
+$mobile-width: $tablet-width - 1;
+
+// common colors
+
+$white: #ffffff;
+$black: #000000;
+$primary-color: #81b3d2;
+$primary-hover-color: #669EC0;
+$primary-active-color: #5496BD;
 
 // text colors
 
 $text-color: #333333;
-$title-color: #000000;
-$primary-text-color: #ffffff;
+$nav-item-current: #766357;
 
 // background colors
 
-$primary-background-color: #81b3d2;
-$field-background-color: #f2f2f2;
-$field-hover-background-color: #e5e5e5;
-$field-active-background-color: #ffffff;
-$field-icon-background-color: #e6e6e6;
+$page-background-color: #e7e5e5;
+$lightgrey: #f2f2f2;
+$lightgrey2: #eaeaea;
+$field-hover-background-color: #e5e5e5;//?
+$field-icon-background-color: #e6e6e6;//?
 $header-background-color: #491213;
 $benefit-background-color: #eeeeee;
 
@@ -21,9 +33,27 @@ $border-color: #e5e5e5;
 $benefit-border-color: #d6d6d6;
 
 //fonts
+$font-family: "PT Sans", tahoma, sans-serif;
 
-$text-font: 400 14px/21px "PT Sans", tahoma, sans-serif;
-$subtitle-font: 700 12px/21px "PT Sans", tahoma, sans-serif;
-$title-font: 700 18px/26px "PT Sans", tahoma, sans-serif;
-$button-font: 700 21px/26px "PT Sans", tahoma, sans-serif;
-$footnote-font: 400 12px/21px "PT Sans", tahoma, sans-serif;
+$highlight-font: 700 12px/21px $font-family;
+$footnote-font: 400 12px/21px $font-family;
+$base-font: 400 14px/21px $font-family;
+$accent-font: 700 18px/26px $font-family;
+$button-font: 700 21px/26px $font-family;
+$accent-font-line-height: 26px;
+
+
+// media templates
+/*
+@media (min-width: $mobile-width) {
+
+}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $desktop-width) {
+
+}
+*/

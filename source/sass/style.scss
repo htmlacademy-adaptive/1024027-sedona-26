@@ -1,3 +1,4 @@
+@import "global.scss";
 @import "fonts.scss";
 @import "vars.scss";
 @import "blocks/benefits.scss";
@@ -11,8 +12,9 @@
 @import "blocks/intro.scss";
 @import "blocks/like.scss";
 @import "blocks/map.scss";
+@import "blocks/media.scss";
 @import "blocks/nowrap.scss";
-@import "blocks/page-nav.scss";
+@import "blocks/main-nav.scss";
 @import "blocks/page-content.scss";
 @import "blocks/page-footer.scss";
 @import "blocks/page-header.scss";
@@ -20,8 +22,6 @@
 @import "blocks/popup.scss";
 @import "blocks/radio.scss";
 @import "blocks/recommendations.scss";
-@import "blocks/site-name.scss";
 @import "blocks/social.scss";
 @import "blocks/title.scss";
 @import "blocks/video.scss";
-@import "blocks/visually-hidden.scss";

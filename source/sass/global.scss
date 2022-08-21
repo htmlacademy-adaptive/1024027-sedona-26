@@ -1,3 +1,8 @@
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .visually-hidden {
   width: 1px;
   height: 1px;
@@ -9,4 +14,7 @@
   margin: -1px;
   border: 0;
   clip-path: inset(100%);
+  border: 0;
+  white-space: nowrap;
+  overflow: hidden;
 }
