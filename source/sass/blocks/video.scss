@@ -1,6 +1,6 @@
 .video {
   text-align: center;
-  border-top: 1px solid $border-color;
+  border-top: 1px solid $lightgrey3;
   padding: 17px 20px 0;
 
   @media (min-width: $tablet-width) {
@@ -34,10 +34,26 @@
 .video__play {
   position: absolute;
   inset: 0;
-  margin: auto;
+  padding: 0;
   border: none;
-  width: 48px;
-  height: 54px;
   cursor: pointer;
-  background: url("../../img/play.svg") no-repeat 50% 50%;
+  opacity: 0.7;
+  background-color: transparent;
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    margin: auto;
+    width: 48px;
+    height: 54px;
+    background-color: $white;
+    clip-path: polygon(100% 50%, 0 0, 0 100%);
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 1;
+    outline: none;
+  }
 }

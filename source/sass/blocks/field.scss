@@ -7,24 +7,26 @@
   width: 100%;
   max-width: $tablet-width;
   border: none;
+  transition: background-color 0.1s ease-in;
 
   &::placeholder {
     color: transparentize($black, 0.7);
   }
 
   &:hover {
-    background-color: $field-hover-background-color;
+    background-color: $lightgrey3;
   }
 
   &:focus,
   &:active {
     outline: none;
     background-color: $white;
-    box-shadow: 0 0 0 4px inset $border-color;
+    box-shadow: 0 0 0 4px inset $lightgrey3;
   }
 
   &--area {
     height: 150px;
-    resize: none;
+    min-height: 150px;
+    resize: vertical;
   }
 }

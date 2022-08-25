@@ -1,34 +1,73 @@
 .main-nav {
-  position: relative;
   text-transform: uppercase;
   font: $accent-font;
   text-align: right;
+  background-color: $white;
 }
 
 .main-nav__toggle {
+  display: none;
   width: 56px;
   height: 56px;
   border: none;
   padding: 0;
-  margin: 0;
-  background: none;
+  margin-left: auto;
+  position: relative;
+  z-index: 3;
   cursor: pointer;
   vertical-align: top;
+  text-align: left;
+  background-color: transparent;
+}
 
-  @media (min-width: $tablet-width) {
-    display: none;
+.main-nav__toggle-icon {
+  @mixin dash {
+    background-color: $primary-color;
+    position: absolute;
+    width: 24px;
+    height: 4px;
+  }
+
+  @include dash;
+  margin: auto;
+  inset: 0;
+
+  &::before {
+    @include dash;
+    content: "";
+    top: -9px;
+  }
+
+  &::after {
+    @include dash;
+    content: "";
+    top: 9px;
+  }
+}
+
+.show-main-nav .main-nav__toggle-icon {
+  background-color: transparent;
+
+  &::before {
+    transform: rotate(45deg);
+    background-color: $white;
+    top: auto;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    background-color: $white;
+    top: auto;
   }
 }
 
 .main-nav__list {
-  display: none;
   list-style: none;
   padding: 0;
   margin: 0;
   position: relative;
 
   @media (max-width: $mobile-width) {
-    position: absolute;
     top: 0;
     left: 0;
     right: 0;
@@ -67,7 +106,8 @@
       }
     }
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       background-color: $primary-hover-color;
     }
 
@@ -80,7 +120,8 @@
   @media (min-width: $tablet-width) {
     flex-basis: 100%;
 
-    &:hover {
+    &:hover,
+    &:focus-within {
       color: $primary-color;
     }
 
@@ -108,9 +149,38 @@
   display: block;
   padding: 17px 10px 12px;
   text-align: center;
+  outline: none;
+
+  &:focus {
+    outline: none;
+  }
 
   @media (min-width: $tablet-width) {
     padding-top: 18px;
     padding-bottom: 17px;
+  }
+}
+
+.js {
+  .main-nav__list {
+    @media (max-width: $mobile-width) {
+      position: absolute;
+      z-index: 2;
+      display: none;
+    }
+  }
+
+  .main-nav__toggle {
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
+  }
+}
+
+.show-main-nav {
+  .main-nav__list {
+    @media (max-width: $mobile-width) {
+      display: block;
+    }
   }
 }

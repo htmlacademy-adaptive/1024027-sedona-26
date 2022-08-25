@@ -9,6 +9,27 @@
   text-decoration: none;
   box-sizing: border-box;
   border: none;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    background-color: $primary-hover-color;
+    cursor: pointer;
+  }
+
+  &:active {
+    background-color: $primary-active-color;
+    color: transparentize($white, 0.7);
+
+    .button__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &:disabled {
+    background-color: $lightgrey3;
+    cursor: not-allowed;
+  }
 
   &--icon {
     width: 48px;
@@ -20,9 +41,6 @@
 
 .button__icon {
   position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
+  inset: 0;
   margin: auto;
 }

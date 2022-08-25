@@ -1,5 +1,20 @@
 .page-header {
   position: relative;
+  background-color: $header-background-color;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/header-mobile@1x.jpg");
+  }
+
+  @media (max-width: $mobile-width) and (min-resolution: 2dppx) {
+    background-image: url("../img/header-mobile@2x.jpg");
+  }
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../../img/header-desktop.jpg");
+  }
 }
 
 .page-header__logo {
@@ -15,32 +30,41 @@
   }
 }
 
+@mixin header-decor {
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 57px;
+    background: url("../../img/header-decor.svg") no-repeat 50% 0;
+  }
+}
+
 .page-header__welcome {
+  @include header-decor;
   margin: 0;
   height: 388px;
-  background: url("../img/welcome.svg") no-repeat 50% 90px, $header-background-color url("../img/header-mobile@1x.jpg") no-repeat 50% 100%;
+  background: url("../img/welcome.svg") no-repeat 50% 90px;
 
   @media (min-resolution: 2dppx) {
-    background: url("../img/welcome.svg") no-repeat 50% 90px, $header-background-color url("../img/header-mobile@2x.jpg") no-repeat 50% 100%;
+    background: url("../img/welcome.svg") no-repeat 50% 90px;
   }
 }
 
 .page-header__site-name {
+  @include header-decor;
   height: 158px;
   color: $white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 0;
-  background: url("../img/sedona.svg") no-repeat 50% 52px, $header-background-color url("../img/header-mobile@1x.jpg") no-repeat 50% 100%;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/sedona.svg") no-repeat 50% 52px, $header-background-color url("../img/header-mobile@2x.jpg") no-repeat 50% 100%;
-  }
+  background: url("../img/sedona.svg") no-repeat 50% 52px;
 
   @media (min-width: $tablet-width) {
     height: 290px;
-    background: url("../img/sedona.svg") no-repeat 50% 95px, $header-background-color url("../img/header-desktop.jpg") no-repeat 50% 100%;
-    background-size: 456px 77px, auto auto;
+    background-position: 50% 95px;
+    background-size: 456px 77px;
   }
 }

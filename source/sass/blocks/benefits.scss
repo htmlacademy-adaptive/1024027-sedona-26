@@ -17,6 +17,7 @@
   padding: 0;
   margin: 0;
   list-style: none;
+  counter-reset: benefit-counter;
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -26,8 +27,8 @@
 
 .benefits__item {
   position: relative;
+  counter-increment: benefit-counter;
   background-color: $benefit-background-color;
-
 
   &--selected {
     background-color: $primary-color;
@@ -81,11 +82,14 @@
 }
 
 .benefits__item-title {
-  margin: 0 0 10px;
-}
-
-.benefits__number {
   margin: 0 0 15px;
+
+  &::after {
+    content: "— №" counter(benefit-counter) " —";
+    font: $base-font;
+    display: block;
+    margin-top: 10px;
+  }
 }
 
 .benefits__text {
