@@ -49,7 +49,7 @@
   margin: 0;
   border-width: 1px 0 0;
   border-style: solid;
-  border-color: $border-color;
+  border-color: $lightgrey3;
 
   @media (min-width: $tablet-width) {
     padding-left: 60px;
@@ -92,7 +92,7 @@
   &::after {
     @media (min-width: $tablet-width) {
       content: "";
-      border-top: 1px solid $border-color;
+      border-top: 1px solid $lightgrey3;
       flex-basis: 20%;
     }
 
@@ -125,6 +125,7 @@
     width: 58px;
     height: 58px;
     background: $field-icon-background-color no-repeat 50% 50%;
+    margin-left: -4px;
   }
 
   &--phone::after {

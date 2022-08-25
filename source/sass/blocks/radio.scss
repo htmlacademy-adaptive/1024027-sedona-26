@@ -1,3 +1,65 @@
+.radio {
+  padding: 10px 0 10px 62px;
+
+  /* Hovered */
+  &:hover .radio__box {
+    background-color: $lightgrey3;
+  }
+
+  /* Active */
+  &:active .radio__input:not(:disabled) + .radio__box {
+    background-color: $lightgrey4;
+
+    &::after {
+      opacity: 0.3;
+    }
+  }
+}
+
 .radio__box {
-  display: none;
+  position: absolute;
+  margin-top: -10px;
+  margin-left: -62px;
+  width: 46px;
+  height: 46px;
+  overflow: hidden;
+  border-radius: 50%;
+  background-color: $lightgrey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background-color: $text-color;
+    border-radius: 50%;
+    opacity: 0;
+  }
+}
+
+.radio__input {
+  position: absolute;
+  appearance: none;
+
+  /* Focused */
+  &:focus + .radio__box {
+    background-color: $lightgrey3;
+  }
+
+  /* checked */
+  &:checked + .radio__box::after {
+    opacity: 1;
+  }
+
+  /* Disabled */
+  &:disabled + .radio__box {
+    background-color: $lightgrey;
+  }
+
+  /* checked disabled */
+  &:checked:disabled + .radio__box::after {
+    opacity: 0.3;
+  }
 }
