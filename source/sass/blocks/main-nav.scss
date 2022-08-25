@@ -21,7 +21,6 @@
 }
 
 .main-nav__toggle-icon {
-
   @mixin dash {
     background-color: $primary-color;
     position: absolute;
@@ -29,19 +28,19 @@
     height: 4px;
   }
 
+  @include dash;
   margin: auto;
   inset: 0;
-  @include dash;
 
   &::before {
-    content: "";
     @include dash;
+    content: "";
     top: -9px;
   }
 
   &::after {
-    content: "";
     @include dash;
+    content: "";
     top: 9px;
   }
 }

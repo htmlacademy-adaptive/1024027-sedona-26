@@ -40,7 +40,7 @@
   opacity: 0.7;
   background-color: transparent;
 
-  &:before {
+  &::before {
     content: "";
     position: absolute;
     inset: 0;
