@@ -5,15 +5,6 @@
   &:hover .radio__box {
     background-color: $lightgrey3;
   }
-
-  /* Active */
-  &:active .radio__input:not(:disabled) + .radio__box {
-    background-color: $lightgrey4;
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
 }
 
 .radio__box {
@@ -42,10 +33,11 @@
 .radio__input {
   position: absolute;
   appearance: none;
+  outline: none;
 
-  /* Focused */
-  &:focus + .radio__box {
-    background-color: $lightgrey3;
+  &:focus-visible + .radio__box {
+    outline: 4px solid $lightgrey4;
+    outline-offset: -4px;
   }
 
   /* checked */

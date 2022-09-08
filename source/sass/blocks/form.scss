@@ -115,28 +115,6 @@
   text-transform: uppercase;
 }
 
-.form__field-wrapper {
-  display: flex;
-
-  &::after {
-    content: "";
-    flex-shrink: 0;
-    display: block;
-    width: 58px;
-    height: 58px;
-    background: $field-icon-background-color no-repeat 50% 50%;
-    margin-left: -4px;
-  }
-
-  &--phone::after {
-    background-image: url("../../img/icon-phone.svg");
-  }
-
-  &--email::after {
-    background-image: url("../../img/icon-email.svg");
-  }
-}
-
 .form__radio-grid {
   display: grid;
   gap: 16px;

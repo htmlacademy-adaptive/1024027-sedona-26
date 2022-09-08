@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — обратная связь</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
 
@@ -27,7 +33,8 @@
         </ul>
       </nav>
 
-      <p class="page-header__site-name">
+      <p class="page-header__cover">
+        <img class="page-header__sitename" src="img/sedona.svg" width="229" height="39" alt="SEDONA" />
         <span class="visually-hidden">SEDONA</span>
       </p>
     </header>
@@ -42,15 +49,15 @@
             <h2 class="form__legend title">Представьтесь:</h2>
             <label class="form__group">
               <span class="form__label">Имя*:</span>
-              <input class="form__field field" type="text" placeholder="Введите имя" required />
+              <input class="form__field field" type="text" placeholder="Введите имя" required>
             </label>
             <label class="form__group">
               <span class="form__label">Фамилия*:</span>
-              <input class="form__field field" type="text" placeholder="Введите фамилию" required />
+              <input class="form__field field" type="text" placeholder="Введите фамилию" required>
             </label>
             <label class="form__group">
               <span class="form__label">Отчество:</span>
-              <input class="form__field field" type="text" placeholder="Введите отчество" />
+              <input class="form__field field" type="text" placeholder="Введите отчество">
             </label>
           </fieldset>
 
@@ -58,15 +65,11 @@
             <h2 class="form__legend title">Контактная информация:</h2>
             <label class="form__group">
               <span class="form__label">Контактный телефон*:</span>
-              <span class="form__field-wrapper form__field-wrapper--phone">
-                <input class="form__field field" type="tel" placeholder="Введите телефон" required />
-              </span>
+              <input class="form__field field field--phone" type="tel" placeholder="Введите телефон" required>
             </label>
             <label class="form__group">
               <span class="form__label">Электронная почта*:</span>
-              <span class="form__field-wrapper form__field-wrapper--email">
-                <input class="form__field field" type="email" placeholder="Введите e-mail" required />
-              </span>
+              <input class="form__field field field--email" type="email" placeholder="Введите e-mail" required>
             </label>
           </fieldset>
 
@@ -75,17 +78,17 @@
 
             <div class="form__radio-grid">
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression"/>
+                <input class="radio__input" type="radio" name="impression">
                 <span class="radio__box"></span>
                 Скорее положительное
               </label>
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression"/>
+                <input class="radio__input" type="radio" name="impression">
                 <span class="radio__box"></span>
                 Скорее отрицательное
               </label>
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression"/>
+                <input class="radio__input" type="radio" name="impression">
                 <span class="radio__box"></span>
                 Затрудняюсь ответить
               </label>
@@ -97,22 +100,22 @@
 
             <div class="form__checkbox-grid">
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration"/>
+                <input class="check__input" type="checkbox" name="attration">
                 <span class="check__box"></span>
                 Мост Дьявола
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration"/>
+                <input class="check__input" type="checkbox" name="attration">
                 <span class="check__box"></span>
                 Гора-Колокол
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration" />
+                <input class="check__input" type="checkbox" name="attration">
                 <span class="check__box"></span>
                 Слайд-парк
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration" />
+                <input class="check__input" type="checkbox" name="attration">
                 <span class="check__box"></span>
                 Красные скалы
               </label>
@@ -195,18 +198,7 @@
 
     </div>
 
-    <script>
-      var toggleId = 'main-nav__toggle';
-      var page = document.documentElement;
+    <script src="js/navigation.js"></script>
 
-      page.classList.remove("no-js");
-      page.classList.add("js");
-
-      document.addEventListener("mousedown", function(e) {
-        if (e.target.id === toggleId || e.target.parentElement.id == toggleId) {
-          page.classList.toggle("show-main-nav");
-        }
-      });
-    </script>
   </body>
 </html>

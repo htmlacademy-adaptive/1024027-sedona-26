@@ -5,15 +5,6 @@
   &:hover .check__box {
     background-color: $lightgrey3;
   }
-
-  /* Active */
-  &:active .check__input:not(:disabled) + .check__box {
-    background-color: $lightgrey4;
-
-    &::after {
-      opacity: 0.3;
-    }
-  }
 }
 
 .check__box {
@@ -43,10 +34,12 @@
 .check__input {
   position: absolute;
   appearance: none;
+  outline: none;
 
   /* Focused */
-  &:focus + .check__box {
-    background-color: $lightgrey3;
+  &:focus-visible + .check__box {
+    outline: 4px solid $lightgrey4;
+    outline-offset: -4px;
   }
 
   /* Checked */
