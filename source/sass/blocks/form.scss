@@ -193,20 +193,4 @@
   display: block;
   margin-left: auto;
   margin-right: auto;
-
-  @mixin field-icon($icon-url) {
-    $icon-area-size: 58px;
-    background-image: url($icon-url), linear-gradient(270deg, $field-icon-background-color $icon-area-size, rgba(255, 255, 255, 0) $icon-area-size);
-    background-position: top 50% right 20px, 0 0;
-    background-repeat: no-repeat;
-    padding-right: $icon-area-size;
-  }
-
-  &--phone {
-    @include field-icon("../img/icon-phone.svg");
-  }
-
-  &--email {
-    @include field-icon("../img/icon-email.svg");
-  }
 }
