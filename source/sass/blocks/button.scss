@@ -11,10 +11,14 @@
   border: none;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     background-color: $primary-hover-color;
     cursor: pointer;
+  }
+
+  &:focus-visible {
+    outline: 4px solid $primary-active-color;
+    outline-offset: -4px;
   }
 
   &:active {

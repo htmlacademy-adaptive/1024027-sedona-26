@@ -4,9 +4,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — главная</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
-  <body class="page__body no-js">
+  <body class="page__body">
 
     <header class="page-header">
 
@@ -27,8 +33,9 @@
         </ul>
       </nav>
 
-      <h1 class="page-header__welcome">
-        <span class="visually-hidden">Welcome to the gordeous SEDONA. "Because the Grand Canyoun sucks!"</span>
+      <h1 class="page-header__cover page-header__cover--main">
+        <img class="page-header__welcome" src="img/welcome.svg" width="282" height="214" alt="Welcome to the gordeous SEDONA. 'Because the Grand Canyoun sucks!'" />
+        <span class="visually-hidden">Welcome to the gordeous SEDONA. 'Because the Grand Canyoun sucks!'</span>
       </h1>
     </header>
 
@@ -146,19 +153,7 @@
       </div>
     </footer>
 
-    <script>
-      var toggleId = 'main-nav__toggle';
-      var page = document.documentElement;
-
-      page.classList.remove("no-js");
-      page.classList.add("js");
-
-      document.addEventListener("mousedown", function(e) {
-        if (e.target.id === toggleId || e.target.parentElement.id == toggleId) {
-          page.classList.toggle("show-main-nav");
-        }
-      });
-    </script>
+    <script src="js/navigation.js"></script>
 
   </body>
 </html>

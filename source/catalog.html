@@ -4,7 +4,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — фото и видео</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <link rel="icon" href="favicon.ico">
+    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/favicons/apple.png">
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
 
@@ -27,7 +33,8 @@
         </ul>
       </nav>
 
-      <p class="page-header__site-name">
+      <p class="page-header__cover">
+        <img class="page-header__sitename" src="img/sedona.svg" width="229" height="39" alt="SEDONA" />
         <span class="visually-hidden">SEDONA</span>
       </p>
     </header>
@@ -42,12 +49,22 @@
           <h2 class="visually-hidden">Фотогалерея</h2>
           <ul class="gallery__list">
             <li class="gallery__item">
-              <a class="gallery__img" href="#"><img src="img/gallery/photo-1-mobile@1x.jpg" alt="Дорога в Седону" /></a>
+              <a class="gallery__img" href="#">
+
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop@1x.jpg 1x, img/gallery/photo-1-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet@1x.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
+                  <source media="(min-width: 321px)" srcset="img/gallery/photo-1-mobile@2x.jpg">
+                  <img class="works-item__image" src="img/gallery/photo-1-mobile@1x.jpg" srcset="img/gallery/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в Седону">
+                </picture>
+
+                <!-- <img src="img/gallery/photo-1-mobile@1x.jpg" alt="Дорога в Седону" /> -->
+              </a>
               <div class="gallery__img-description">
                 <div class="gallery__img-name">Неродные просторы</div>
                 <cite class="gallery__img-author">Автор фото: Борис</cite>
                 <div class="gallery__like like">
-                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
                   <span class="like__count">1350</span>
                 </div>
               </div>
@@ -58,7 +75,7 @@
                 <div class="gallery__img-name">Местная растительность</div>
                 <cite class="gallery__img-author">Автор фото: Сергей</cite>
                 <div class="gallery__like like">
-                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
                   <span class="gallery__like-count">143</span>
                 </div>
               </div>
@@ -69,7 +86,7 @@
                 <div class="gallery__img-name">Дорога на север</div>
                 <cite class="gallery__img-author">Автор фото: Петр</cite>
                 <div class="gallery__like like">
-                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
                   <span class="gallery__like-count">96</span>
                 </div>
               </div>
@@ -80,7 +97,7 @@
                 <div class="gallery__img-name">Мост дьявола</div>
                 <cite class="gallery__img-author">Автор фото: Антон</cite>
                 <div class="gallery__like like">
-                  <button class="like__button"><span class="visually-hidden">Нравится</span></button>
+                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
                   <span class="gallery__like-count">254</span>
                 </div>
               </div>
@@ -94,7 +111,13 @@
           <b class="video__title title">Все еще сомневаетесь?</b>
           <p class="video__intro intro">Смотрите видеопрезентацию и&nbsp;скорее за&nbsp;билетами, пока они не&nbsp;подорожали в&nbsp;очередной раз!</p>
           <div class="video__player">
-            <img src="img/video-poster@1x.jpg" alt="Стоп-кадр презентации Седоны" />
+
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-posters/video-desktop@1x.jpg 1x, img/video-posters/video-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/video-posters/video-tablet@1x.jpg 1x, img/video-posters/video-tablet@2x.jpg 2x">
+              <img src="img/video-posters/video-mobile@1x.jpg" srcset="img/video-posters/video-mobile@2x.jpg 2x" width="280" height="177" alt="Стоп-кадр презентации Седоны">
+            </picture>
+
             <button class="video__play" type="button"><span class="visually-hidden">Воспроизвести</span></button>
           </div>
         </section>
@@ -139,18 +162,7 @@
       </div>
     </footer>
 
-    <script>
-      var toggleId = 'main-nav__toggle';
-      var page = document.documentElement;
+    <script src="js/navigation.js"></script>
 
-      page.classList.remove("no-js");
-      page.classList.add("js");
-
-      document.addEventListener("mousedown", function(e) {
-        if (e.target.id === toggleId || e.target.parentElement.id == toggleId) {
-          page.classList.toggle("show-main-nav");
-        }
-      });
-    </script>
   </body>
 </html>

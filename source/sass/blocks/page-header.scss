@@ -1,70 +1,107 @@
 .page-header {
   position: relative;
-  background-color: $header-background-color;
-  background-repeat: no-repeat;
-  background-position: 50% 100%;
-
-  @media (max-width: $mobile-width) {
-    background-image: url("../img/header-mobile@1x.jpg");
-  }
-
-  @media (max-width: $mobile-width) and (min-resolution: 2dppx) {
-    background-image: url("../img/header-mobile@2x.jpg");
-  }
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../../img/header-desktop.jpg");
-  }
 }
 
 .page-header__logo {
   position: absolute;
+  z-index: 1;
   width: 185px;
   top: 0;
   left: 0;
   right: 0;
   margin: 0 auto;
+  outline: none;
 
   @media (min-width: $tablet-width) {
     z-index: 1;
+  }
+
+  &:focus-visible::after {
+    content: "";
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    transform: rotate(45deg) skew(4deg, 4deg);
+    outline: 4px solid #491213;
+    outline-offset: 4px;
+    border-radius: 15px;
+    top: -155px;
+    left: -7.5px;
   }
 }
 
 @mixin header-decor {
   position: relative;
 
-  &::before {
+  &::after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
     height: 57px;
-    background: url("../../img/header-decor.svg") no-repeat 50% 0;
+    background: url("../img/header-decor.svg") no-repeat 50% 0;
   }
 }
 
-.page-header__welcome {
-  @include header-decor;
-  margin: 0;
-  height: 388px;
-  background: url("../img/welcome.svg") no-repeat 50% 90px;
-
-  @media (min-resolution: 2dppx) {
-    background: url("../img/welcome.svg") no-repeat 50% 90px;
-  }
-}
-
-.page-header__site-name {
+.page-header__cover {
   @include header-decor;
   height: 158px;
   color: $white;
   margin: 0;
-  background: url("../img/sedona.svg") no-repeat 50% 52px;
+  padding: 20px;
+  text-align: center;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-position: 50% 100%;
+  $gradient: linear-gradient(164deg, #e4f1f9 0%, #86b7d5 20%, #7c5253 50%, #491213 90%);
+
+  @media (max-width: $mobile-width) {
+    background-image: url("../img/header-mobile@1x.jpg"), $gradient;
+
+    @media (min-resolution: 1.5dppx) {
+      background-size: cover;
+      background-image: url("../img/header-mobile@2x.jpg"), $gradient;
+    }
+  }
 
   @media (min-width: $tablet-width) {
     height: 290px;
-    background-position: 50% 95px;
-    background-size: 456px 77px;
+    background-image: url("../img/header-desktop@1x.jpg"), $gradient;
+
+    @media (min-resolution: 1.5dppx) {
+      background-size: cover;
+      background-image: url("../img/header-desktop@2x.jpg"), $gradient;
+    }
+  }
+
+
+  &--main {
+    height: 389px;
+
+    @media (min-width: $tablet-width) {
+      height: 518px;
+    }
+  }
+}
+
+.page-header__welcome {
+  margin-top: 70px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 57px;
+
+    width: 450px;
+    height: 360px;
+  }
+}
+
+.page-header__sitename {
+  margin-top: 32px;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 75px;
+    width: 456px;
+    height: 77px;
   }
 }

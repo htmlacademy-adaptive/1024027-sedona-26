@@ -4,14 +4,24 @@
   text-align: center;
 }
 
+.copyright__text {
+  vertical-align: middle;
+}
+
 .copyright__link {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
   text-decoration: none;
   color: $black;
   outline: none;
 
-  &:hover,
-  &:focus {
+  &:hover {
     color: $primary-color;
+  }
+
+  &:focus-visible {
+    outline: 4px solid $primary-color;
   }
 
   &:active {
