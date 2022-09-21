@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — фото и видео</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
@@ -57,47 +57,97 @@
 
                   <source media="(min-width: 1200px)" srcset="img/gallery/photo-1-desktop@1x.jpg 1x, img/gallery/photo-1-desktop@2x.jpg 2x">
                   <source media="(min-width: 768px)" srcset="img/gallery/photo-1-tablet@1x.jpg 1x, img/gallery/photo-1-tablet@2x.jpg 2x">
-                  <img class="works-item__image" src="img/gallery/photo-1-mobile@1x.jpg" srcset="img/gallery/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в Седону">
+                  <img src="img/gallery/photo-1-mobile@1x.jpg" srcset="img/gallery/photo-1-mobile@1x.jpg 1x, img/gallery/photo-1-mobile@2x.jpg 2x" width="280" height="280" alt="Дорога в Седону">
                 </picture>
               </a>
               <div class="gallery__img-description">
                 <div class="gallery__img-name">Неродные просторы</div>
                 <cite class="gallery__img-author">Автор фото: Борис</cite>
                 <div class="gallery__like like">
-                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
+                  <a href="#" class="like__button">
+                    <span class="visually-hidden">Нравится</span>
+                    <svg width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                  </a>
                   <span class="like__count">1350</span>
                 </div>
               </div>
             </li>
             <li class="gallery__item">
-              <a class="gallery__img" href="#"><img src="img/gallery/photo-2-mobile@1x.jpg" alt="Растение забудка обыкновенная" /></a>
+              <a class="gallery__img" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop@1x.webp 1x, img/gallery/photo-2-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet@1x.webp 1x, img/gallery/photo-2-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/gallery/photo-2-mobile@1x.webp 1x, img/gallery/photo-2-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/gallery/photo-2-desktop@1x.jpg 1x, img/gallery/photo-2-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery/photo-2-tablet@1x.jpg 1x, img/gallery/photo-2-tablet@2x.jpg 2x">
+                  <img src="img/gallery/photo-2-mobile@1x.jpg" srcset="img/gallery/photo-2-mobile@1x.jpg 1x, img/gallery/photo-2-mobile@2x.jpg 2x" width="280" height="280" alt="Растение забудка обыкновенная">
+                </picture>
+              </a>
               <div class="gallery__img-description">
                 <div class="gallery__img-name">Местная растительность</div>
                 <cite class="gallery__img-author">Автор фото: Сергей</cite>
                 <div class="gallery__like like">
-                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
+                  <a href="#" class="like__button">
+                    <span class="visually-hidden">Нравится</span>
+                    <svg width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                  </a>
                   <span class="gallery__like-count">143</span>
                 </div>
               </div>
             </li>
             <li class="gallery__item">
-              <a class="gallery__img" href="#"><img src="img/gallery/photo-3-mobile@1x.jpg" alt="Вид на дорогу в Седону с высоты птичьего полета" /></a>
+              <a class="gallery__img" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop@1x.webp 1x, img/gallery/photo-3-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet@1x.webp 1x, img/gallery/photo-3-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/gallery/photo-3-mobile@1x.webp 1x, img/gallery/photo-3-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/gallery/photo-3-desktop@1x.jpg 1x, img/gallery/photo-3-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery/photo-3-tablet@1x.jpg 1x, img/gallery/photo-3-tablet@2x.jpg 2x">
+                  <img src="img/gallery/photo-3-mobile@1x.jpg" srcset="img/gallery/photo-3-mobile@1x.jpg 1x, img/gallery/photo-3-mobile@2x.jpg 2x" width="280" height="280" alt="Вид на дорогу в Седону с высоты птичьего полета">
+                </picture>
+              </a>
               <div class="gallery__img-description">
                 <div class="gallery__img-name">Дорога на север</div>
                 <cite class="gallery__img-author">Автор фото: Петр</cite>
                 <div class="gallery__like like">
-                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
+                  <a href="#" class="like__button">
+                    <span class="visually-hidden">Нравится</span>
+                    <svg width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                  </a>
                   <span class="gallery__like-count">96</span>
                 </div>
               </div>
             </li>
             <li class="gallery__item">
-              <a class="gallery__img" href="#"><img src="img/gallery/photo-4-mobile@1x.jpg" alt="Мост дьявола" /></a>
+              <a class="gallery__img" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop@1x.webp 1x, img/gallery/photo-4-desktop@2x.webp 2x">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet@1x.webp 1x, img/gallery/photo-4-tablet@2x.webp 2x">
+                  <source type="image/webp" srcset="img/gallery/photo-4-mobile@1x.webp 1x, img/gallery/photo-4-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/gallery/photo-4-desktop@1x.jpg 1x, img/gallery/photo-4-desktop@2x.jpg 2x">
+                  <source media="(min-width: 768px)" srcset="img/gallery/photo-4-tablet@1x.jpg 1x, img/gallery/photo-4-tablet@2x.jpg 2x">
+                  <img src="img/gallery/photo-4-mobile@1x.jpg" srcset="img/gallery/photo-4-mobile@1x.jpg 1x, img/gallery/photo-4-mobile@2x.jpg 2x" width="280" height="280" alt="Мост дьявола">
+                </picture>
+              </a>
               <div class="gallery__img-description">
                 <div class="gallery__img-name">Мост дьявола</div>
                 <cite class="gallery__img-author">Автор фото: Антон</cite>
                 <div class="gallery__like like">
-                  <a href="#" class="like__button"><span class="visually-hidden">Нравится</span></a>
+                  <a href="#" class="like__button">
+                    <span class="visually-hidden">Нравится</span>
+                    <svg width="23" height="21">
+                      <use xlink:href="img/sprite.svg#like"></use>
+                    </svg>
+                  </a>
                   <span class="gallery__like-count">254</span>
                 </div>
               </div>
