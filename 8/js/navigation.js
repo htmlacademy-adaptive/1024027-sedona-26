@@ -1,0 +1,1 @@
+const toggleId="main-nav__toggle",showNavigationClass="show-main-nav";var page=document.querySelector(".page");page.classList.remove("no-js"),document.addEventListener("mouseup",(function(e){e.target.id!==toggleId&&e.target.parentElement.id!==toggleId||page.classList.toggle("show-main-nav")}));
