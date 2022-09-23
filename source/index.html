@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Седона — главная</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
 
     <link rel="icon" href="favicon.ico">
-    <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
   </head>
@@ -52,7 +52,17 @@
               <h3 class="benefits__item-title">Настоящий городок</h3>
               <p class="benefits__text">СЕДОНА НЕ АТТРАКЦИОН ДЛЯ ТУРИСТОВ, ТАМ ТЕЧЕТ СВОЯ ЖИЗНЬ</p>
             </div>
-            <img class="benefits__img" src="img/photo-city@1x.jpg" alt="Местное здание" width="320" height="260" />
+
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-city-desktop@1x.webp 1x, img/photo-city-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.webp 1x, img/photo-city-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-city-mobile@1x.webp 1x, img/photo-city-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/photo-city-desktop@1x.jpg 1x, img/photo-city-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-city-tablet@1x.jpg 1x, img/photo-city-tablet@2x.jpg 2x">
+              <img class="benefits__img" src="img/photo-city@1x.jpg" srcset="img/photo-city@1x.jpg, img/photo-city@2x.jpg 2x" width="320" height="260" alt="Местное здание">
+            </picture>
+
             <ul class="benefits__recommendations recommendations">
               <li class="recommendations__item recommendations__item--house">
                 <h4 class="recommendations__title title">Жилье</h4>
@@ -73,7 +83,15 @@
               <h3 class="benefits__item-title">Там есть Мост дьявола</h3>
               <p class="benefits__text">Да, по нему можно пройти! Если вы осмелитесь, конечно</p>
             </div>
-            <img class="benefits__img" src="img/photo-bridge@1x.jpg" alt="Мост дьявола" width="320" height="260" />
+            <picture>
+              <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.webp 1x, img/photo-bridge-desktop@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.webp 1x, img/photo-bridge-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-bridge-mobile@1x.webp 1x, img/photo-bridge-mobile@2x.webp 2x">
+
+              <source media="(min-width: 1200px)" srcset="img/photo-bridge-desktop@1x.jpg 1x, img/photo-bridge-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-bridge-tablet@1x.jpg 1x, img/photo-bridge-tablet@2x.jpg 2x">
+              <img class="benefits__img" src="img/photo-bridge@1x.jpg" srcset="img/photo-bridge@1x.jpg 1x, img/photo-bridge@2x.jpg 2x" width="320" height="260" alt="Мост дьявола">
+            </picture>
           </li>
           <li class="benefits__item">
             <div class="benefits__item-content">
