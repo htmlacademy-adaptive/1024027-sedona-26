@@ -1,19 +1,25 @@
 .like__count {
-  font: $highlight-font;
+  font: $base-bold-font;
 }
 
 .like__button {
   display: inline-block;
-  vertical-align: -3px;
+  vertical-align: -1px;
   width: 40px;
   height: 40px;
   box-sizing: border-box;
   padding: 10px 0 0 9px;
   margin-right: 5px;
+  text-align: left;
   color: transparentize($black, 0.7);
 
   @media (max-width: $mobile-width) {
     margin-left: -9px;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-right: 1px;
+    vertical-align: -2px;
   }
 
   @media (min-width: $desktop-width) {

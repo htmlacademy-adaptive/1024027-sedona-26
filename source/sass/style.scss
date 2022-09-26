@@ -1,6 +1,7 @@
-@import "global.scss";
-@import "fonts.scss";
 @import "vars.scss";
+@import "fonts.scss";
+@import "global.scss";
+@import "blocks/title.scss";
 @import "blocks/benefits.scss";
 @import "blocks/button.scss";
 @import "blocks/check.scss";
@@ -23,5 +24,4 @@
 @import "blocks/radio.scss";
 @import "blocks/recommendations.scss";
 @import "blocks/social.scss";
-@import "blocks/title.scss";
 @import "blocks/video.scss";

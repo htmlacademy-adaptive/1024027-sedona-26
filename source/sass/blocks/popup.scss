@@ -5,6 +5,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 10;
 }
 
 .popup__window {
@@ -20,6 +21,10 @@
 
 .popup__title {
   margin: 0 0 21px;
+
+  @media (min-width: $tablet-width) {
+    font: $bigest-font;
+  }
 }
 
 .popup__intro {
@@ -27,15 +32,19 @@
 }
 
 .popup__content {
-  padding: 50px 45px;
+  padding: 45px 42px;
 }
 
 .popup__footer {
-  padding: 0 50px 50px;
+  padding: 0 50px 35px;
 
   &--selected {
-    padding: 44px 45px;
+    padding: 20px;
     background-color: $lightgrey;
+
+    @media (min-width: $tablet-width) {
+      padding: 44px;
+    }
   }
 }
 
