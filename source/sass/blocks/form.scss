@@ -80,6 +80,16 @@
     }
   }
 
+  @media (min-width: $tablet-width) and (max-width: ($desktop-width - 1)) {
+    &:first-child .form__legend {
+      text-indent: 42px;
+    }
+
+    &:nth-child(2) .form__legend {
+      text-indent: -41px;
+    }
+  }
+
   @media (min-width: $desktop-width) {
     padding: 0 67px 15px;
 
@@ -170,6 +180,7 @@
   @media (min-width: $desktop-width) {
     grid-template-columns: repeat(3, max-content);
     display: flex;
+    flex-wrap: wrap;
     gap: 16px 61px;
     padding: 18px 30px 25px 70px;
   }

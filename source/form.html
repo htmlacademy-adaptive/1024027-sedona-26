@@ -3,15 +3,19 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="отдых, поиск отелей, отпуск, бронирование отелей">
+    <meta name="description" content="Сервис по поиску отелей Седона">
+
     <title>Седона — обратная связь</title>
 
     <link rel="stylesheet" href="css/style.min.css">
+    <link rel="preload" href="fonts/ptsans.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+    <link rel="preload" href="fonts/ptsansbold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
 
     <link rel="icon" href="favicon.ico">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png">
     <link rel="manifest" href="manifest.webmanifest">
-
 
   </head>
   <body class="page__body">
@@ -42,7 +46,7 @@
     </header>
 
     <div class="page-content">
-      <form class="form">
+      <form class="form" action="https://echo.htmlacademy.ru" method="post">
         <h1 class="form__title title">Оставьте свой отзыв</h1>
         <p class="form__intro intro">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о&nbsp;посещенных вами достопримечательностях</p>
 
@@ -51,15 +55,15 @@
             <h2 class="form__legend title">Представьтесь:</h2>
             <label class="form__group">
               <span class="form__label">Имя*:</span>
-              <input class="form__field field" type="text" placeholder="Введите имя" required>
+              <input class="form__field field" type="text" name="name" id="name" placeholder="Введите имя" required>
             </label>
             <label class="form__group">
               <span class="form__label">Фамилия*:</span>
-              <input class="form__field field" type="text" placeholder="Введите фамилию" required>
+              <input class="form__field field" type="text" name="surname" id="surname" placeholder="Введите фамилию" required>
             </label>
             <label class="form__group">
               <span class="form__label">Отчество:</span>
-              <input class="form__field field" type="text" placeholder="Введите отчество">
+              <input class="form__field field" type="text" name="patronymic" id="patronymic" placeholder="Введите отчество">
             </label>
           </fieldset>
 
@@ -67,11 +71,11 @@
             <h2 class="form__legend title">Контактная информация:</h2>
             <label class="form__group">
               <span class="form__label">Контактный телефон*:</span>
-              <input class="form__field field field--phone" type="tel" placeholder="Введите телефон" required>
+              <input class="form__field field field--phone" type="number" name="phone" id="phone" placeholder="Введите телефон" required>
             </label>
             <label class="form__group">
               <span class="form__label">Электронная почта*:</span>
-              <input class="form__field field field--email" type="email" placeholder="Введите e-mail" required>
+              <input class="form__field field field--email" type="email" name="email" id="email" placeholder="Введите e-mail" required>
             </label>
           </fieldset>
 
@@ -80,17 +84,17 @@
 
             <div class="form__radio-grid">
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression" checked>
+                <input class="radio__input" type="radio" name="impression" id="positive" checked>
                 <span class="radio__box"></span>
                 Скорее положительное
               </label>
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression">
+                <input class="radio__input" type="radio" name="impression" id="negative">
                 <span class="radio__box"></span>
                 Скорее отрицательное
               </label>
               <label class="form__option radio">
-                <input class="radio__input" type="radio" name="impression">
+                <input class="radio__input" type="radio" name="impression" id="neutral">
                 <span class="radio__box"></span>
                 Затрудняюсь ответить
               </label>
@@ -102,22 +106,22 @@
 
             <div class="form__checkbox-grid">
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration">
+                <input class="check__input" type="checkbox" name="attraction" id="bridge">
                 <span class="check__box"></span>
                 Мост Дьявола
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration">
+                <input class="check__input" type="checkbox" name="attraction" id="mountain">
                 <span class="check__box"></span>
                 Гора-Колокол
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration">
+                <input class="check__input" type="checkbox" name="attraction" id="park">
                 <span class="check__box"></span>
                 Слайд-парк
               </label>
               <label class="form__option check">
-                <input class="check__input" type="checkbox" name="attration">
+                <input class="check__input" type="checkbox" name="attraction" id="rock">
                 <span class="check__box"></span>
                 Красные скалы
               </label>
@@ -127,7 +131,7 @@
           <fieldset class="form__fieldset">
             <h2 class="form__legend title">Опишите свои эмоции:</h2>
             <label class="form__group">
-              <textarea class="form__field field field--area" rows="4" cols="30" placeholder="Опишите подробно все свои восторги"></textarea>
+              <textarea class="form__field field field--area" rows="4" cols="30" placeholder="Опишите подробно все свои восторги" name="review" id="review"></textarea>
             </label>
           </fieldset>
         </div>

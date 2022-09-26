@@ -10,6 +10,7 @@
   @media (min-width: $tablet-width) {
     padding: 0;
     display: flex;
+    flex-wrap: wrap;
     text-align: center;
   }
 }
@@ -21,7 +22,7 @@
 
   @media (min-width: $tablet-width) {
     padding: 54px 36px 59px;
-    flex-basis: 100%;
+    flex-basis: calc(100% / 3);
   }
 
   @media (min-width: $desktop-width) {
