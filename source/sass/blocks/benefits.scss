@@ -1,16 +1,40 @@
 .benefits {
   text-transform: uppercase;
-  padding-top: 32px;
+  padding-top: 34px;
+
+  @media (min-width: $tablet-width) {
+    padding-top: 48px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 59px;
+  }
 }
 
 .benefits__title {
   margin: 0 18px 35px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 29px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .benefits__intro {
-  margin: 32px 18px;
+  margin: 0 18px 38px;
   text-align: center;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 56px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 45px;
+  }
 }
 
 .benefits__list {
@@ -18,6 +42,10 @@
   margin: 0;
   list-style: none;
   counter-reset: benefit-counter;
+
+  @media (max-width: $mobile-width) {
+    clip-path: polygon(50% 15px, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 
   @media (min-width: $tablet-width) {
     display: grid;
@@ -36,7 +64,6 @@
 
     @media (min-width: $tablet-width) {
       grid-column-start: span 3;
-
       display: grid;
 
       &:nth-child(2n + 1) {
@@ -57,12 +84,24 @@
       }
     }
 
+    &:first-child .benefits__item-content {
+      @media (max-width: $mobile-width) {
+        padding-top: 49px;
+        padding-bottom: 39px;
+      }
+    }
+
     .benefits__item-content {
-      padding-top: 40px;
-      padding-bottom: 32px;
+      @media (max-width: $mobile-width) {
+        padding: 40px 18px 34px;
+      }
+
+      @media (min-width: $tablet-width) {
+        padding: 40px 40px 44px;
+      }
 
       @media (min-width: $desktop-width) {
-        padding: 50px;
+        padding: 47px 40px;
       }
     }
   }
@@ -82,31 +121,42 @@
 }
 
 .benefits__item-content {
+  padding: 27px 18px 23px;
   text-align: center;
-  padding: 18px;
 
   @media (min-width: $tablet-width) {
-    padding: 40px;
+    padding: 42px 35px 40px;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 40px 40px 60px;
+    padding: 42px 40px 61px;
   }
 }
 
 .benefits__item-title {
-  margin: 0 0 15px;
+  margin: 0 0 17px;
+  font: $accent-font;
+
+  @media (min-width: $tablet-width) {
+    font: $button-font;
+    max-width: 158px;
+    margin: 0 auto 23px;
+  }
 
   &::after {
     content: "— №" counter(benefit-counter) " —";
     font: $base-font;
     display: block;
-    margin-top: 10px;
+    margin-top: 11px;
+
+    @media (min-width: $tablet-width) {
+      margin-top: 13px;
+    }
   }
 }
 
 .benefits__text {
-  margin: 15px 0 0;
+  margin: 0;
 }
 
 .benefits__img {

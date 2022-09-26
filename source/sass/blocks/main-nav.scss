@@ -8,7 +8,7 @@
 
 .main-nav__toggle {
   @media (max-width: $tablet-width) {
-    width: 56px;
+    width: 62px;
     height: 56px;
     border: none;
     padding: 0;
@@ -73,6 +73,7 @@
   padding: 0;
   margin: 0;
   text-align: center;
+  white-space: nowrap;
 
   @media (max-width: $mobile-width) {
     top: 0;
@@ -137,11 +138,17 @@
     flex-basis: 100%;
 
     &:nth-child(2) {
-      margin-right: 160px;
+      margin-right: 148px;
     }
 
     &--current {
       color: $nav-item-current;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &:nth-child(2) {
+      margin-right: 239px;
     }
   }
 }

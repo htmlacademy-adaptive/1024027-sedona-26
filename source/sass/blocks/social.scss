@@ -7,10 +7,16 @@
 
 .social__title {
   margin: 0 0 34px;
+  font: $button-font;
 
   @media (min-width: $tablet-width) {
     flex-basis: 100%;
     margin-bottom: 0;
+    text-indent: -25px;
+  }
+
+  @media (min-width: $desktop-width) {
+    text-indent: -50px;
   }
 }
 

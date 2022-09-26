@@ -16,20 +16,33 @@
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 0 20px;
+  margin: 0 0 26px;
+
+  @media (min-width: $tablet-width) {
+    font: $big-font;
+    margin-bottom: 33px;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 31px;
+  }
 }
 
 .media__intro {
   text-align: center;
   padding-left: 20px;
   padding-right: 20px;
-  margin: 0 0 20px;
+  margin: 0 0 36px;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 60px;
+    margin: 0 auto 80px;
+    padding: 0;
+    max-width: 68%;
   }
 
   @media (min-width: $desktop-width) {
-    margin-bottom: 65px;
+    margin-bottom: 88px;
+    max-width: 40%;
   }
 }
