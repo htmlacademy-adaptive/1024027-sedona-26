@@ -93,7 +93,7 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
-    justify-content: space-around;
+    flex-wrap: wrap;
   }
 }
 
@@ -135,9 +135,9 @@
   }
 
   @media (min-width: $tablet-width) {
-    flex-basis: 100%;
+    flex-basis: calc((100% - 148px) / 4);
 
-    &:nth-child(2) {
+    &:nth-child(4n - 2) {
       margin-right: 148px;
     }
 
@@ -147,7 +147,9 @@
   }
 
   @media (min-width: $desktop-width) {
-    &:nth-child(2) {
+    flex-basis: calc((100% - 239px) / 4);
+
+    &:nth-child(4n - 2) {
       margin-right: 239px;
     }
   }
