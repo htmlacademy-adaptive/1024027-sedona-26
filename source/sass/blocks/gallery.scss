@@ -24,7 +24,7 @@
 
 .gallery__item {
   border-top: 1px solid $lightgrey3;
-  padding: 24px 20px 25px;
+  padding: 24px 20px 21px;
 
   @media (min-width: $tablet-width) {
     border: none;
@@ -71,7 +71,7 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet-width) {
-    padding: 20px 20px 15px;
+    padding: 19px 20px 14px;
     position: relative;
     display: grid;
     grid-auto-flow: column;
@@ -89,13 +89,19 @@
 }
 
 .gallery__img-name {
-  font: $highlight-font;
+  font: $base-bold-font;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    margin-top: 4px;
+  }
 }
 
 .gallery__img-author {
   font: $base-font;
   color: $text-color;
+  display: block;
+  margin-bottom: 2px;
 
   @media (min-width: $desktop-width) {
     color: inherit;
@@ -105,7 +111,6 @@
 .gallery__like {
   @media (min-width: $tablet-width) {
     grid-area: like;
-    align-self: center;
     text-align: right;
   }
 }

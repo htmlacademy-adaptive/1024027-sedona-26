@@ -44,5 +44,9 @@
     height: 150px;
     min-height: 150px;
     resize: vertical;
+
+    @media (min-width: $tablet-width) {
+      height: 160px;
+    }
   }
 }

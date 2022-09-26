@@ -1,8 +1,9 @@
 .page-footer {
-  padding: 39px 18px 23px;
+  padding: 28px 18px 23px;
   text-align: center;
 
   @media (min-width: $tablet-width) {
+    padding: 36px 18px 23px;
     display: flex;
     align-items: center;
   }

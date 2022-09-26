@@ -12,6 +12,13 @@
   margin: 0 auto;
   outline: none;
 
+  @media (max-width: $mobile-width) {
+    .no-js & {
+      position: static;
+      display: block;
+    }
+  }
+
   @media (min-width: $tablet-width) {
     z-index: 1;
   }
@@ -75,6 +82,9 @@
     }
   }
 
+  @media (min-width: $desktop-width) {
+    height: 301px;
+  }
 
   &--main {
     height: 389px;
@@ -90,9 +100,13 @@
 
   @media (min-width: $tablet-width) {
     margin-top: 57px;
+    width: 460px;
+    height: 349.08px;
+  }
 
-    width: 450px;
-    height: 360px;
+  @media (min-width: $desktop-width) {
+    width: 456px;
+    height: 351.35px;
   }
 }
 
@@ -103,5 +117,11 @@
     margin-top: 75px;
     width: 456px;
     height: 77px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-top: 82px;
+    width: 459px;
+    height: 78.16px;
   }
 }
